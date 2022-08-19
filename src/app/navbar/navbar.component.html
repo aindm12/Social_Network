@@ -1,0 +1,83 @@
+<header>
+    <div class="container">
+      <div>
+        <img
+          src="./assets/images/cglogo.svg"
+          alt="DCX"
+          class="logo"
+          style="height: 50px; width: 200px"
+        /> 
+        <span class="name"> Social Netwroking for Everyone</span>
+      </div>
+      <form [formGroup]="requiredForm" novalidate (ngSubmit)="onSubmit()" id="search" class="form-inline">
+        <!-- <label>Email <input type="text" name="s-user" id="s-user"></label>&nbsp;&nbsp;
+        <label>Password <input type="text" name="s-pass" id="s-pass"></label>&nbsp;&nbsp;&nbsp;
+        -->
+          <label  class="sr-only" for="email"></label>
+            <input type="email" formControlName="email"  id="exampleInputEmail3" placeholder="Email">
+         <small *ngIf="requiredForm.controls['email'].invalid && requiredForm.controls['email'].touched" class="alert">*Enter correct email.
+            <small *ngIf="requiredForm.controls['email'].errors?.['required']">
+            <!-- Email is required. -->
+            </small>
+         </small>
+       &nbsp;&nbsp;&nbsp;&nbsp;
+          <label class="sr-only" for="exampleInputPassword3">Password</label>
+            <input type="password"   formControlName="password" placeholder="password">
+        <small *ngIf="requiredForm.controls['password'].invalid && requiredForm.controls['password'].touched" class="alert">*Enter strong password.
+            <small *ngIf="requiredForm.controls['password'].errors?.['required']">
+            <!-- Password is required. -->
+            </small>
+          </small> &nbsp;&nbsp;
+      <!-- <form  id="search" class="form-inline" >
+        <div class="form-group">
+            <label class="sr-only" for="email">Email address</label>
+            <input type="email" class="form-control"  id="exampleInputEmail3" placeholder="Email"/>
+                              &nbsp;
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="exampleInputPassword3">Password</label>
+             <input type="password" class="form-control" id="password"placeholder="Password"/>
+             
+        </div> -->
+        <button type="submit" [disabled]='requiredForm.invalid'  (click)="onSubmit()">Login</button>
+        <!-- <button type="submit" class="btn btn-default">Sign In</button><br /> -->
+        <div class="checkbox">
+          <label> <input type="checkbox" /> Remember me </label>
+        </div>
+      </form>
+    </div>
+  </header>
+
+
+  <!--Bootstrap Navbar with links-->
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="">Home</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="members">Members</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="groups">Groups</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="photos">Photos</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="profile">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+

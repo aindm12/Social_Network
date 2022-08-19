@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+.panel-heading{
+    background-image: linear-gradient(#04519b, #044687 60%, #033769);
+    color: #fff !important;
+    text-align: center;
+}
+
+.friends li{
+    list-style: none;
+    display: inline;
+    float: left;
+    padding: 0 5px;
+}
+
+.friends img{
+    width: 70px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.group-item img{
+    width: 80px;
+    float: left;
+    margin-right: 15px;
+}
+
+.group-item{
+    padding-bottom: 10px;
+    border: 1px solid#ccc;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+

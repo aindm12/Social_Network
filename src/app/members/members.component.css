@@ -1,0 +1,23 @@
+.members .member-row{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+
+.p{
+    margin-top: 30%;
+}
+
+.p1{
+    margin-top: 40%;
+}
+
+
+
+.members img{
+    margin-bottom: 5px;
+}
+
+
+
